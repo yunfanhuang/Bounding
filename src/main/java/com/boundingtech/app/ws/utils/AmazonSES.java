@@ -16,7 +16,6 @@ import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 import com.boundingtech.app.ws.exceptions.EmailVerificationException;
 import com.boundingtech.app.ws.shared.dto.UserDTO;
 
-
 /**
  *
  * @author sergeykargopolov
@@ -32,7 +31,7 @@ public class AmazonSES {
   final String HTMLBODY = "<h1>Please verify your email address</h1>"
       + "<p>Thank you for registering with our mobile app. To complete registration process and be able to log in,"
       + " click on the following link: " 
-      + "<a href='http://localhost:8080/MOBILE-APP-WS-DEV/verify-email.jsp?token=$tokenValue'>"
+      + "<a href='http://localhost:8080/BOUNDINGTECH-APP-DEV/verify-email.jsp?token=$tokenValue'>"
       + "Final step to complete your registration"
       + "</a><br/><br/>"
       + "Thank you! And we are waiting for you inside!";
@@ -41,7 +40,7 @@ public class AmazonSES {
   final String TEXTBODY = "Please verify your email address. "
       + "Thank you for registering with our mobile app. To complete registration process and be able to log in,"
       + " open then the following URL in your browser window: " 
-      + " http://localhost:8080/MOBILE-APP-WS-DEV/verify-email.jsp?token=$tokenValue"
+      + " http://localhost:8080/BOUNDINGTECH-APP-DEV/verify-email.jsp?token=$tokenValue"
       + " Thank you! And we are waiting for you inside!";
   
   public void verifyEmail(UserDTO userDto)

@@ -6,7 +6,7 @@
 package com.boundingtech.app.ws.service.impl;
 
 import com.boundingtech.app.ws.exceptions.AuthenticationException;
-//import com.appsdeveloperblog.app.ws.exceptions.EmailVerificationException;
+import com.boundingtech.app.ws.exceptions.EmailVerificationException;
 import com.boundingtech.app.ws.io.dao.DAO;
 import com.boundingtech.app.ws.io.dao.impl.MySQLDAO;
 import com.boundingtech.app.ws.service.AuthenticationService;

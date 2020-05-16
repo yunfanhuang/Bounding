@@ -15,6 +15,7 @@ import com.boundingtech.app.ws.io.dao.impl.MySQLDAO;
 import com.boundingtech.app.ws.service.UsersService;
 import com.boundingtech.app.ws.shared.dto.UserDTO;
 import com.boundingtech.app.ws.ui.model.response.ErrorMessages;
+import com.boundingtech.app.ws.utils.AmazonSES;
 import com.boundingtech.app.ws.utils.UserProfileUtils;
 import java.util.List;
 
@@ -59,6 +60,8 @@ public class UsersServiceImpl implements UsersService {
 
         // Record data into a database 
         returnValue = this.saveUser(user);
+
+        new AmazonSES().verifyEmail(user);
 
         // Return back the user profile
         return returnValue;
